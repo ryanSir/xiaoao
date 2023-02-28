@@ -1,0 +1,44 @@
+1.Java的Collection和Map：如何实现key-Value的LRU缓存？
+    1.1 面试题
+        * 请用Iterator实现一个随机序列产生器
+        * Collection和Set的区别
+        * Map是不是Collection
+        * TreeMap和HashMap的区别
+        * HashMap vs Hashtable
+        * 实现key-value的LRU缓存
+    1.2 容器Collection
+        * 容纳数据的容器 （一组group对象，提供增删改，遍历Iterator）
+        * Iterator - coding
+        * Collection接口 - 源代码阅读
+        * 集合Set<E>
+            内容不重复的容器
+            实现
+               - ConcurrentSkipListSet - 跳表
+               - CopyOnWriteArraySet
+               - EnumSet - 位运算
+               - Hashset
+               - ImmutableCollection.SetN
+               - LinkedHashSet
+               - TreeSet - 树
+            Null Object
+                - TreeSet 不允许（因为元素必须是Comparable）
+                - HashSet 允许
+    1.3 映射
+        * 两个集合的对应关系 - key -> value
+        * 实现 HashMap、TreeMap、Hashtable、SortedMap
+        * Map是不是Entry容器
+            Entry<k,v>是一个key,value集合
+            阅读Entry源码思考结论
+        * Map<K,V>接口
+        * Map的实现
+            ConcurrentHashMap、HashMap、Hashtable、LinkedHashMap是基于哈希表的实现
+            TreeMap是基于树的实现
+            ConcurrentSkipListMap是基于跳表的实现
+            EnumMap是基于位运算的实现
+        * HashMap vs HashTable
+            对比源码
+            HashMap运行null,HashTable不允许
+        * LinkedHashMap
+            实现LRUCache
+    1.4 总结
+
