@@ -1,8 +1,6 @@
 package c2;
 
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import lombok.var;
 
@@ -35,17 +33,29 @@ public class CommonIterator<T> implements Iterable<T> {
     }
 
     public static void main(String[] args) {
-        var list = Arrays.asList("List", "Tree", "Array");
-        var gen = new CommonIterator<String>(list);
+//        // var 动态类型，用来定义局部变量
+//        var list = Arrays.asList("List", "Tree", "Array");
+//        var gen = new CommonIterator<String>(list);
+//
+//        // for循环的会进入到iterator()方法，先判断hasNext,返回true，再执行next
+//        for (var s : gen) {
+//            System.out.println(s);
+//        }
+//
+//        var it = gen.iterator();
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(it.next());
+//        }
+//
+//        ArrayList<String> arr = new ArrayList<>();
+//        arr.add("123");
+//        var stringArr = arr.toArray(new String[10]);
 
-        // for循环的会进入到iterator()方法，先判断hasNext,返回true，再执行next
-        for (var s : gen) {
-            System.out.println(s);
-        }
+        ArrayList<String> arr2 = new ArrayList<>();
+        arr2.add("333");
+        arr2.add("222");
+        String[] strings = arr2.stream().toArray(value -> new String[value]);
+        System.out.println(strings);
 
-        var it = gen.iterator();
-        for (int i = 0; i < 100; i++) {
-            System.out.println(it.next());
-        }
     }
 }
