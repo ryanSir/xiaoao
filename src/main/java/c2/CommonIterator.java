@@ -12,6 +12,7 @@ public class CommonIterator<T> implements Iterable<T> {
 
     private final List<T> list;
 
+
     public CommonIterator(List<T> list) {
         this.list = list;
     }
